@@ -1,7 +1,7 @@
 mod helpers {
     // TODO: 让这段代码编译通过，可以通过添加 `use` 语句或使用
     //  适当的路径来引用 `Ticket` 结构体。
-
+    use super::Ticket;
     fn create_todo_ticket(title: String, description: String) -> Ticket {
         Ticket::new(title, description, "To-Do".into())
     }

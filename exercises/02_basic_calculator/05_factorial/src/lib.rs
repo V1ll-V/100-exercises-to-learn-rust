@@ -9,7 +9,13 @@
 // `factorial(2)` 返回 `2`，以此类推。
 //
 // 只使用你已学过的知识！还没有学循环，所以你得用递归！
-
+fn factorial(n: u32) -> u32 {
+    if n == 0 {
+        1
+    } else {
+        n * factorial(n - 1)
+    }
+}
 #[cfg(test)]
 mod tests {
     use crate::factorial;

@@ -1,6 +1,6 @@
 fn compute(a: u32, b: u32) -> u32 {
     // TODO: 修改下面这行代码以修复编译器错误并使测试通过。
-    let multiplier: u8 = 4;
+    let multiplier: u32 = 4;
     a + b * multiplier
 }
 

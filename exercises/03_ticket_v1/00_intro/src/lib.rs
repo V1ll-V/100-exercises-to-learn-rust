@@ -1,6 +1,6 @@
 fn intro() -> &'static str {
     // TODO: 修复我 👇
-    "I'm ready to __!"
+    "I'm ready to start modelling a software ticket!"
 }
 
 #[cfg(test)]

@@ -1,9 +1,9 @@
 pub fn factorial(n: u32) -> u32 {
-    let mut result = 1;
+    let mut result: u32 = 1;
     for i in 1..=n {
         // 使用饱和乘法，在达到 u32 最大值时停止
         // 而不是溢出并回绕
-        result *= i;
+        result = result.saturating_mul(i);
     }
     result
 }

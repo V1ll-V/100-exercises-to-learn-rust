@@ -2,7 +2,9 @@
 /// 计算旅程的平均速度。
 fn speed(start: u32, end: u32, time_elapsed: u32) -> u32 {
     // TODO: 如果 `time_elapsed` 为 0，则用自定义消息触发 panic
-
+if time_elapsed == 0 {
+    panic!("The journey took no time at all. That's impossible!");
+}
     (end - start) / time_elapsed
 }
 

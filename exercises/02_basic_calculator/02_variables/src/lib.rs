@@ -8,9 +8,10 @@
 pub fn speed(start: u32, end: u32, time_elapsed: u32) -> u32 {
     // TODO: 定义一个名为 `distance` 的变量并赋予正确的值，使测试通过
     //  你需要标注 `distance` 的类型吗？为什么需要或为什么不需要？
-
+    let distance: u32 = end - start;
     // 不要修改下面这行
     distance / time_elapsed
+    
 }
 
 #[cfg(test)]
