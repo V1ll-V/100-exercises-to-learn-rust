@@ -1,6 +1,5 @@
-// TODO: Implement the `fixed_reply` function. It should accept two `TcpListener` instances,
-//  accept connections on both of them concurrently, and always reply to clients by sending
-//  the `Display` representation of the `reply` argument as a response.
+// TODO: 实现 `fixed_reply` 函数。它应接受两个 `TcpListener` 实例，
+//  并发地接受二者的连接，并始终通过发送 `reply` 参数的 `Display` 表示作为响应来回复客户端。
 use std::fmt::Display;
 use tokio::io::AsyncWriteExt;
 use tokio::net::TcpListener;
@@ -42,7 +41,7 @@ mod tests {
                     let mut socket = tokio::net::TcpStream::connect(addr).await.unwrap();
                     let (mut reader, _) = socket.split();
 
-                    // Read the response
+                    // 读取响应
                     let mut buf = Vec::new();
                     reader.read_to_end(&mut buf).await.unwrap();
                     assert_eq!(&buf, reply.as_bytes());

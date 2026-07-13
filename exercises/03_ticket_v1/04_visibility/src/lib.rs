@@ -32,42 +32,40 @@ mod ticket {
     }
 }
 
-// TODO: **Exceptionally**, you'll be modifying both the `ticket` module and the `tests` module
-//  in this exercise.
+// TODO: **例外地**，本练习中你需要同时修改 `ticket` 模块和 `tests` 模块。
 #[cfg(test)]
 mod tests {
-    // TODO: Add the necessary `pub` modifiers in the parent module to remove the compiler
-    //  errors about the use statement below.
+    // TODO: 在父模块中添加必要的 `pub` 修饰符，以消除下面 use 语句的编译器错误。
     use super::ticket::Ticket;
 
-    // Be careful though! We don't want this function to compile after you have changed
-    // visibility to make the use statement compile!
-    // Once you have verified that it indeed doesn't compile, comment it out.
+    // 但要小心！在你为了编译 use 语句而更改可见性之后，
+    // 我们不希望下面这个函数编译通过！
+    // 一旦你验证它确实无法编译，就把它注释掉。
     fn should_not_be_possible() {
         let ticket = Ticket::new("A title".into(), "A description".into(), "To-Do".into());
 
-        // You should be seeing this error when trying to run this exercise:
+        // 尝试运行本练习时，你应该会看到这个错误：
         //
         // error[E0616]: field `description` of struct `Ticket` is private
         //    |
         //    |              assert_eq!(ticket.description, "A description");
         //    |                         ^^^^^^^^^^^^^^^^^^
         //
-        // TODO: Once you have verified that the below does not compile,
-        //   comment the line out to move on to the next exercise!
+        // TODO: 一旦你验证下面的代码无法编译，
+        //   就注释掉这一行，继续下一个练习！
         assert_eq!(ticket.description, "A description");
     }
 
     fn encapsulation_cannot_be_violated() {
-        // This should be impossible as well, with a similar error as the one encountered above.
-        // (It will throw a compilation error only after you have commented the faulty line
-        // in the previous test - next compilation stage!)
+        // 这同样应该是不可能的，会抛出与上面类似的错误。
+        // （只有在你注释掉上一个测试中有问题的行之后，
+        // 才会在下一个编译阶段抛出编译错误！）
         //
-        // This proves that `Ticket::new` is now the only way to get a `Ticket` instance.
-        // It's impossible to create a ticket with an illegal title or description!
+        // 这证明了 `Ticket::new` 现在是获取 `Ticket` 实例的唯一途径。
+        // 不可能创建一个带有非法标题或描述的 ticket！
         //
-        // TODO: Once you have verified that the below does not compile,
-        //   comment the lines out to move on to the next exercise!
+        // TODO: 一旦你验证下面的代码无法编译，
+        //   就注释掉这些行，继续下一个练习！
         let ticket = Ticket {
             title: "A title".into(),
             description: "A description".into(),

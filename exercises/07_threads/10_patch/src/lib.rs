@@ -1,6 +1,6 @@
 use std::sync::mpsc::{sync_channel, Receiver, SyncSender};
 
-// TODO: Implement the patching functionality.
+// TODO: 实现补丁（patch）功能。
 use crate::data::{Ticket, TicketDraft, TicketPatch};
 use crate::store::{TicketId, TicketStore};
 
@@ -88,8 +88,8 @@ pub fn server(receiver: Receiver<Command>) {
                 todo!()
             }
             Err(_) => {
-                // There are no more senders, so we can safely break
-                // and shut down the server.
+                // 没有更多发送者了，所以我们可以安全地
+                // 停止并关闭服务器。
                 break;
             }
         }

@@ -1,10 +1,8 @@
-// This is our last exercise. Let's go down a more unstructured path!
-// Try writing an **asynchronous REST API** to expose the functionality
-// of the ticket management system we built throughout the course.
-// It should expose endpoints to:
-//  - Create a ticket
-//  - Retrieve ticket details
-//  - Patch a ticket
+// 这是我们的最后一个练习。让我们走一条更自由探索的路线！
+// 尝试编写一个**异步 REST API**，将我们在整个课程中构建的票务管理系统的功能暴露出来。
+// 它应该暴露以下端点：
+//  - 创建工单
+//  - 获取工单详情
+//  - 更新工单
 //
-// Use Rust's package registry, crates.io, to find the dependencies you need
-// (if any) to build this system.
+// 使用 Rust 的包注册中心 crates.io 来查找构建此系统所需的依赖（如果有的话）。

@@ -4,8 +4,8 @@ pub struct Ticket {
     status: String,
 }
 
-// TODO: based on what you learned in this section, replace `todo!()` with
-//  the correct **stack size** for the respective type.
+// TODO: 根据你在本节中学到的知识，将 `todo!()` 替换为
+//  相应类型的正确**栈大小**。
 #[cfg(test)]
 mod tests {
     use super::Ticket;
@@ -18,11 +18,11 @@ mod tests {
 
     #[test]
     fn ticket_size() {
-        // This is a tricky question!
-        // The "intuitive" answer happens to be the correct answer this time,
-        // but, in general, the memory layout of structs is a more complex topic.
-        // If you're curious, check out the "Type layout" section of The Rust Reference
-        // https://doc.rust-lang.org/reference/type-layout.html for more information.
+        // 这是一个有难度的问题！
+        // "直觉性"的答案这次恰好也是正确答案，
+        // 但一般来说，结构体的内存布局是一个更复杂的话题。
+        // 如果你感兴趣，可以查阅 Rust 参考手册的"类型布局"章节
+        // https://doc.rust-lang.org/reference/type-layout.html 了解更多信息。
         assert_eq!(size_of::<Ticket>(), todo!());
     }
 }

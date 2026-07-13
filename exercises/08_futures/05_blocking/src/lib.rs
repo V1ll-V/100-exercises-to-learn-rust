@@ -1,7 +1,6 @@
-// TODO: the `echo` server uses non-async primitives.
-//  When running the tests, you should observe that it hangs, due to a
-//  deadlock between the caller and the server.
-//  Use `spawn_blocking` inside `echo` to resolve the issue.
+// TODO: `echo` 服务器使用了非异步原语。
+//  运行测试时，你会发现它由于调用者和服务器之间的死锁而挂起。
+//  在 `echo` 内部使用 `spawn_blocking` 来解决这个问题。
 use std::io::{Read, Write};
 use tokio::net::TcpListener;
 
@@ -48,12 +47,12 @@ mod tests {
                 let mut socket = tokio::net::TcpStream::connect(addr).await.unwrap();
                 let (mut reader, mut writer) = socket.split();
 
-                // Send the request
+                // 发送请求
                 writer.write_all(request.as_bytes()).await.unwrap();
-                // Close the write side of the socket
+                // 关闭套接字的写入端
                 writer.shutdown().await.unwrap();
 
-                // Read the response
+                // 读取响应
                 let mut buf = Vec::with_capacity(request.len());
                 reader.read_to_end(&mut buf).await.unwrap();
                 assert_eq!(&buf, request.as_bytes());

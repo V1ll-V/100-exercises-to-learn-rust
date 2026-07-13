@@ -1,9 +1,9 @@
-// TODO: use `Status` as type for `Ticket::status`
-//   Adjust the signature and implementation of all other methods as necessary.
+// TODO: 使用 `Status` 作为 `Ticket::status` 的类型
+//   根据需要调整所有其他方法的签名和实现。
 
 #[derive(Debug, PartialEq)]
-// `derive`s are recursive: it can only derive `PartialEq` if all fields also implement `PartialEq`.
-// Same holds for `Debug`. Do what you must with `Status` to make this work.
+// `derive` 是递归的：只有当所有字段也都实现了 `PartialEq`，才能 derive `PartialEq`。
+// `Debug` 同理。请对 `Status` 做必要操作使其正常工作。
 struct Ticket {
     title: String,
     description: String,
@@ -11,7 +11,7 @@ struct Ticket {
 }
 
 enum Status {
-    // TODO: add the missing variants
+    // TODO: 添加缺失的变体
 }
 
 impl Ticket {

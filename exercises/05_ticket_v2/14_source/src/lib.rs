@@ -1,17 +1,17 @@
 use crate::status::Status;
 
-// We've seen how to declare modules in one of the earliest exercises, but
-// we haven't seen how to extract them into separate files.
-// Let's fix that now!
+// 我们在之前的练习中已经学过如何声明模块，但
+// 还没有学过如何将它们提取到单独的文件中。
+// 现在就来解决这个问题！
 //
-// In the simplest case, when the extracted module is a single file, it is enough to
-// create a new file with the same name as the module and move the module content there.
-// The module file should be placed in the same directory as the file that declares the module.
-// In this case, `src/lib.rs`, thus `status.rs` should be placed in the `src` directory.
+// 在最简单的情况下，当提取的模块是单个文件时，只需
+// 创建一个与模块同名的文件，并将模块内容移到其中即可。
+// 模块文件应放在声明该模块的文件所在的同一目录中。
+// 在本例中，声明模块的文件是 `src/lib.rs`，因此 `status.rs` 应放在 `src` 目录中。
 mod status;
 
-// TODO: Add a new error variant to `TicketNewError` for when the status string is invalid.
-//   When calling `source` on an error of that variant, it should return a `ParseStatusError` rather than `None`.
+// TODO: 为 `TicketNewError` 添加一个新的错误变体，用于处理状态字符串无效的情况。
+//   当对此变体的错误调用 `source` 时，应返回一个 `ParseStatusError` 而不是 `None`。
 
 #[derive(Debug, thiserror::Error)]
 pub enum TicketNewError {
@@ -47,7 +47,7 @@ impl Ticket {
             return Err(TicketNewError::DescriptionTooLong);
         }
 
-        // TODO: Parse the status string into a `Status` enum.
+        // TODO: 将状态字符串解析为 `Status` 枚举。
 
         Ok(Ticket {
             title,

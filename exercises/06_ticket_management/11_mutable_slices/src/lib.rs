@@ -1,5 +1,5 @@
-// TODO: Define a function named `squared` that raises all `i32`s within a slice to the power of 2.
-//  The slice should be modified in place.
+// TODO: 定义一个名为 `squared` 的函数，将切片中所有 `i32` 的值平方。
+//  切片应原地修改。
 
 #[cfg(test)]
 mod tests {

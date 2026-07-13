@@ -4,8 +4,8 @@ pub struct Ticket {
     status: String,
 }
 
-// TODO: based on what you learned in this section, replace `todo!()` with
-//  the correct **stack size** for the respective type.
+// TODO: 根据你在本节中学到的知识，将 `todo!()` 替换为
+//  相应类型的正确**栈大小**。
 #[cfg(test)]
 mod tests {
     use super::Ticket;

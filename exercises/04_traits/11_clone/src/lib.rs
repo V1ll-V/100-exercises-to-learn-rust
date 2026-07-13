@@ -1,5 +1,5 @@
-// TODO: add the necessary `Clone` implementations (and invocations)
-//  to get the code to compile.
+// TODO: 添加必要的 `Clone` 实现（和调用）
+//  以使代码能够编译。
 
 pub fn summary(ticket: Ticket) -> (Ticket, Summary) {
     (ticket, ticket.summary())

@@ -1,7 +1,7 @@
-// TODO: based on what we just learned about ownership, it sounds like immutable references
-//   are a good fit for our accessor methods.
-//   Change the existing implementation of `Ticket`'s accessor methods to take a reference
-//   to `self` as an argument, rather than taking ownership of it.
+// TODO: 根据我们刚刚学到的所有权知识，不可变引用似乎是
+//   访问器（accessor）方法的好选择。
+//   修改 `Ticket` 的访问器方法的现有实现，让它们接受 `self` 的引用
+//   作为参数，而不是获取其所有权。
 
 pub struct Ticket {
     title: String,
@@ -54,9 +54,9 @@ mod tests {
     #[test]
     fn works() {
         let ticket = Ticket::new("A title".into(), "A description".into(), "To-Do".into());
-        // If you change the signatures as requested, this should compile:
-        // we can call these methods one after the other because they borrow `self`
-        // rather than taking ownership of it.
+        // 如果你按照要求更改了签名，以下代码应该可以编译：
+        // 我们可以依次调用这些方法，因为它们借用 `self`
+        // 而不是获取其所有权。
         assert_eq!(ticket.title(), "A title");
         assert_eq!(ticket.description(), "A description");
         assert_eq!(ticket.status(), "To-Do");

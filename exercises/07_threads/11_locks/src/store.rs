@@ -32,8 +32,8 @@ impl TicketStore {
         id
     }
 
-    // The `get` method should return a handle to the ticket
-    // which allows the caller to either read or modify the ticket.
+    // `get` 方法应该返回一个票据的句柄，
+    // 允许调用者既可以读取也可以修改票据。
     pub fn get(&self, id: TicketId) -> Option<todo!()> {
         todo!()
     }

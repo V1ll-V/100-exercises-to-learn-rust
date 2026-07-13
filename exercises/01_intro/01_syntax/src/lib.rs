@@ -1,10 +1,10 @@
-// TODO: fix the function signature below to make the tests pass.
-//  Make sure to read the compiler error message—the Rust compiler is your pair programming
-//  partner in this course and it'll often guide you in the right direction!
+// TODO: 修复下面的函数签名，使测试通过。
+//  务必阅读编译器的错误信息——Rust 编译器是你在这门课程中的结对编程伙伴，
+//  它通常会引导你走向正确的方向！
 //
-// The input parameters should have the same type of the return type.
+// 输入参数应该与返回类型具有相同的类型。
 fn compute(a, b) -> u32 {
-    // Don't touch the function body.
+    // 不要修改函数体。
     a + b * 2
 }
 

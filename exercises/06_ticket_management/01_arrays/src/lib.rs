@@ -1,4 +1,4 @@
-// TODO: Flesh out the `WeekTemperatures` struct and its method implementations to pass the tests.
+// TODO: 完善 `WeekTemperatures` 结构体及其方法实现以通过测试。
 
 pub struct WeekTemperatures {
     // TODO

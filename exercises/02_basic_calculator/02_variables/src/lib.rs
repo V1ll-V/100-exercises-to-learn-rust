@@ -1,15 +1,15 @@
-// 👇 The lines below, starting with `///`, are called **documentation comments**.
-//    They attach documentation to the item that follows them. In this case, the `speed` function.
-//    If you run `cargo doc --open` from this exercise's directory, Rust will generate
-//    HTML documentation from these comments and open it in your browser.
+// 👇 下面以 `///` 开头的行称为**文档注释**。
+//    它们为紧随其后的项附加文档。在这里是为 `speed` 函数附加文档。
+//    如果你在此练习目录下运行 `cargo doc --open`，Rust 会从这些注释
+//    生成 HTML 文档并在浏览器中打开。
 
-/// Given the start and end points of a journey, and the time it took to complete it,
-/// calculate the average speed.
+/// 给定一段旅程的起点和终点，以及完成该旅程所花的时间，
+/// 计算平均速度。
 pub fn speed(start: u32, end: u32, time_elapsed: u32) -> u32 {
-    // TODO: define a variable named `distance` with the right value to get tests to pass
-    //  Do you need to annotate the type of `distance`? Why or why not?
+    // TODO: 定义一个名为 `distance` 的变量并赋予正确的值，使测试通过
+    //  你需要标注 `distance` 的类型吗？为什么需要或为什么不需要？
 
-    // Don't change the line below
+    // 不要修改下面这行
     distance / time_elapsed
 }
 

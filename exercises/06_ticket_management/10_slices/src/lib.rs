@@ -1,5 +1,4 @@
-// TODO: Define a function named `sum` that takes a reference to a slice of `u32` and returns the sum of all
-//  elements in the slice.
+// TODO: 定义一个名为 `sum` 的函数，接受一个 `u32` 切片的引用，返回切片中所有元素的和。
 
 #[cfg(test)]
 mod tests {

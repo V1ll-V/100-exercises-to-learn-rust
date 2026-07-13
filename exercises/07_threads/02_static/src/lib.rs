@@ -1,6 +1,5 @@
-// TODO: Given a static slice of integers, split the slice into two halves and
-//  sum each half in a separate thread.
-//  Do not allocate any additional memory!
+// TODO: 给定一个静态整数切片，将其分成两半，并在两个独立的线程中各计算一半的和。
+//  不要分配任何额外的内存！
 use std::thread;
 
 pub fn sum(slice: &'static [i32]) -> i32 {
