@@ -1,5 +1,5 @@
 // This is a Rust file. It is a plain text file with a `.rs` extension.
-//
+// 
 // Like most modern programming languages, Rust supports comments. You're looking at one right now!
 // Comments are ignored by the compiler; you can leverage them to annotate code with notes and
 // explanations.
