@@ -2,7 +2,7 @@
 // 在后续章节中，我们会再次涉及 trait 和内部可变性之后
 // 重新拾起这个概念。
 fn outro() -> &'static str {
-    "I have a basic understanding of __!"
+    "I have a basic understanding of destructors!"
 }
 
 #[cfg(test)]
