@@ -29,7 +29,15 @@ pub mod ticket {
                 status,
             }
         }
-
+        pub fn title(&self) -> &str {
+            &self.title
+        }
+        pub fn description(&self) -> &str {
+            &self.description
+        }
+        pub fn status(&self) -> &str {
+            &self.status
+        }
         // TODO: 为 `Ticket` 结构体添加三个公开方法：
         //  - `title`，返回 `title` 字段。
         //  - `description`，返回 `description` 字段。

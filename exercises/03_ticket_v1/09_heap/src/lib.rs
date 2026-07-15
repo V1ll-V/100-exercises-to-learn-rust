@@ -13,7 +13,7 @@ mod tests {
 
     #[test]
     fn string_size() {
-        assert_eq!(size_of::<String>(), todo!());
+        assert_eq!(size_of::<String>(), 24);
     }
 
     #[test]
@@ -23,6 +23,6 @@ mod tests {
         // 但一般来说，结构体的内存布局是一个更复杂的话题。
         // 如果你感兴趣，可以查阅 Rust 参考手册的"类型布局"章节
         // https://doc.rust-lang.org/reference/type-layout.html 了解更多信息。
-        assert_eq!(size_of::<Ticket>(), todo!());
+        assert_eq!(size_of::<Ticket>(), 72);
     }
 }
